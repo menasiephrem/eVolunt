@@ -1,13 +1,14 @@
 {
-  "name": "",
-  "version": "0.0.0",
-  "description": "",
+  "name": "eVolunt API",
+  "version": "1.0.0",
+  "description": "An API for eVolunt: a social network for charities and volunteers\n",
+  "url": "http://178.62.247.200",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2017-12-16T10:20:07.085Z",
+    "time": "2018-02-06T10:40:11.073Z",
     "url": "http://apidocjs.com",
     "version": "0.17.6"
   }

@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "POST",
-    "url": "/auth/login",
+    "url": ":7000/auth/login",
     "title": "User login",
     "name": "LoginUser",
     "group": "Auth",
@@ -76,7 +76,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Response Example:",
-          "content": "{\n  \"token\": \"2YGBbVAXGbKzTXkyHHVDbqNR1+YiAQ7MiW5vFvmlWvFM8p2sZNKhsB1QtNgrs16JfDO+SbqdcawB\",\n \"user\": {\n     \"_id\": \"5a15416ef41983179cd3e7ec\",\n     \"last_modified\": \"2017-11-22T09:20:46.153Z\",\n     \"date_created\": \"2017-11-22T09:20:46.153Z\",\n     \"user\": {\n         \"_id\": \"5a15416df41983179cd3e7eb\",\n         \"last_modified\": \"2017-11-22T09:20:45.922Z\",\n         \"date_created\": \"2017-11-22T09:20:45.922Z\",\n         \"username\": \"jandow@email.com\",\n         \"role\": \"volunteer\",\n         \"realm\": \"user\"\n     },\n     \"following\": [],\n     \"locations\": [],\n     \"picture\": \"\"\n }\n}",
+          "content": "{\n    \"token\": \"ekouK8J8qrx02pwWgnO40xOcX592M4ZIone8fB15g3fkblqMvc2+KV1O84vKG3haZGIK5kIY4YE8\",\n    \"user\": {\n        \"_id\": \"5a65d40aa21a2c0014947526\",\n        \"last_modified\": \"2018-01-22T12:07:38.862Z\",\n        \"date_created\": \"2018-01-22T12:07:38.862Z\",\n        \"name\": \"Muday\",\n        \"city\": \"Addis Ababa\",\n        \"website\": \"muday.com\",\n        \"user\": {\n            \"_id\": \"5a65d40aa21a2c0014947525\",\n            \"last_modified\": \"2018-01-22T12:07:38.679Z\",\n            \"date_created\": \"2018-01-22T12:07:38.679Z\",\n            \"username\": \"muday@evolunt.com\",\n            \"role\": \"charity\",\n            \"realm\": \"user\"\n        },\n        \"followers\": [],\n        \"following\": [],\n        \"location\": [],\n        \"picture\": \"\"\n    }\n}\n}",
           "type": "json"
         }
       ]
@@ -87,7 +87,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/auth/logout",
+    "url": ":7000/auth/logout",
     "title": "User logout",
     "name": "LogoutUser",
     "group": "Auth",
@@ -107,7 +107,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/auth/signup",
+    "url": ":7000/auth/signup",
     "title": "User Signup",
     "name": "SignupUser",
     "group": "Auth",
@@ -134,7 +134,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "role",
-            "description": "<p>User Role ie talent, trainee, trainer or admin</p>"
+            "description": "<p>User Role ie charity and volunteer</p>"
           },
           {
             "group": "Parameter",
@@ -214,7 +214,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/charities/:id",
+    "url": ":7100/charities/:id",
     "title": "Update a Charity",
     "name": "UpdateCharity",
     "group": "Charity",
@@ -243,7 +243,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/charities/:id/pic",
+    "url": ":7100/charities/:id/pic",
     "title": "upload picture for a Charity",
     "name": "UpdateCharityOic",
     "group": "Charity",
@@ -254,7 +254,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/charities/:id",
+    "url": ":7100/charities/:id",
     "title": "Get a Charity",
     "name": "getCharity",
     "group": "Charity",
@@ -274,7 +274,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/charities/paginate",
+    "url": ":7100/charities/paginate",
     "title": "Get Charities",
     "name": "paginateCharity",
     "group": "Charity",
@@ -283,7 +283,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Response Example:",
-          "content": "{\n \"page\": 1,\n \"total_docs\": 1,\n \"total_pages\": 1,\n \"per_page\": 10,\n \"docs\": [\n     {\n         \"_id\": \"5a23d51464095d682c91779d\",\n         \"last_modified\": \"2017-12-03T10:42:28.294Z\",\n         \"date_created\": \"2017-12-03T10:42:28.294Z\",\n         \"user\": {\n             \"_id\": \"5a23d51464095d682c91779c\",\n             \"last_modified\": \"2017-12-03T10:42:28.260Z\",\n             \"date_created\": \"2017-12-03T10:42:28.260Z\",\n             \"username\": \"jane@email.com\",\n             \"role\": \"charity\",\n             \"realm\": \"user\"\n         },\n         \"__v\": 0,\n         \"first_name\": \"Jane\",\n         \"last_name\": \"Doe\",\n         \"followers\": [],\n         \"following\": [],\n         \"interests\": [],\n         \"location\": [],\n         \"picture\": \"/images/INSA-Ethiosat.jpg\"\n     }\n \t\t]\t\t\n  }",
+          "content": "{\n \"page\": 1,\n \"total_docs\": 1,\n \"total_pages\": 1,\n \"per_page\": 10,\n \"docs\": [\n    {\n    \"_id\": \"5a2fa9217e6d190ec12a94b9\",\n    \"last_modified\": \"2017-12-12T10:02:09.777Z\",\n    \"date_created\": \"2017-12-12T10:02:09.777Z\",\n    \"user\": {\n        \"_id\": \"5a2fa9217e6d190ec12a94b8\",\n        \"last_modified\": \"2017-12-12T10:02:09.350Z\",\n        \"date_created\": \"2017-12-12T10:02:09.350Z\",\n        \"username\": \"jane@email.com\",\n        \"role\": \"charity\",\n        \"realm\": \"user\"\n    },\n    \"description\": \"I am a girl who likes to help people\",\n    \"followers\": [],\n    \"following\": [],\n    \"location\": [],\n    \"picture\": \"/images/0f3777c7b5e7c2bf2995533e4d974868--lion-love-dads.jpg\"\n}\n \t\t]\t\t\n  }",
           "type": "json"
         }
       ]
@@ -294,7 +294,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/events/",
+    "url": ":7400/events/",
     "title": "Create Event",
     "name": "CreateEvent",
     "group": "Event",
@@ -306,36 +306,36 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "The",
-            "description": "<p>id of the user creating the user</p>"
+            "field": "User",
+            "description": "<p>the id of the user creating the event</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "Title",
-            "description": "<p>of the Event</p>"
+            "field": "Titile",
+            "description": "<p>title of the Event</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "Descrition",
-            "description": "<p>of the event</p>"
+            "field": "Description",
+            "description": "<p>descrition of the event</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "Location",
-            "description": "<p>of the event</p>"
+            "description": "<p>location of the event</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "Date",
-            "description": "<p>of the Event</p>"
+            "description": "<p>date of the Event</p>"
           }
         ]
       },
@@ -351,7 +351,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Response Example:",
-          "content": "{\n    \"_id\": \"5a34eceb9edf904ba93879f6\",\n    \"last_modified\": \"2017-12-16T09:52:43.012Z\",\n    \"date_created\": \"2017-12-16T09:52:43.012Z\",\n    \"created_by\": \"5a2fa9217e6d190ec12a94b9\",\n    \"title\": \"Feed the poor\",\n    \"description\": \"We will be feeding the poor in Chirstmass\",\n    \"location\": \"Addis Abbaa\",\n    \"date_of_event\": \"2017-12-12T10:02:09.350Z\",\n    \"intersetd_users\": [],\n    \"picture\": \"\"\n}",
+          "content": "{\n    \"_id\": \"5a65e82b6c3e4e63e2700f92\",\n    \"last_modified\": \"2018-01-22T13:33:31.180Z\",\n    \"date_created\": \"2018-01-22T13:33:31.180Z\",\n    \"charity\": {\n        \"_id\": \"5a65dfd9a2a3b8547fbd31d8\",\n        \"last_modified\": \"2018-01-22T12:58:01.366Z\",\n        \"date_created\": \"2018-01-22T12:58:01.366Z\",\n        \"name\": \"Muday\",\n        \"city\": \"Addis Ababa\",\n        \"website\": \"muday.com\",\n        \"user\": \"5a65dfd8a2a3b8547fbd31d7\",\n        \"followers\": [],\n        \"following\": [],\n        \"location\": [],\n        \"picture\": \"\"\n    },\n    \"title\": \"Feed the poor\",\n    \"description\": \"We will be feeding the poor in Chirstmass\",\n    \"location\": \"Addis Abbaa\",\n    \"date_of_event\": \"2017-12-12T10:02:09.350Z\",\n    \"intersetd_users\": [],\n    \"picture\": \"\"\n}",
           "type": "json"
         }
       ]
@@ -362,7 +362,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/events/",
+    "url": ":7400/events/",
     "title": "Get Events paginated",
     "name": "GetEvents",
     "group": "Event",
@@ -382,7 +382,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/events/:id",
+    "url": ":7400/events/:id",
     "title": "Get a specifc id",
     "name": "GetSingleEvents",
     "group": "Event",
@@ -402,7 +402,7 @@ define({ "api": [
   },
   {
     "type": "DELETE",
-    "url": "/events/:id",
+    "url": ":7400/events/:id",
     "title": "Delete an Event",
     "name": "RemoveSingleEvents",
     "group": "Event",
@@ -421,8 +421,19 @@ define({ "api": [
     "groupTitle": "Event"
   },
   {
+    "type": "PUT",
+    "url": ":7400/events/:id/pic",
+    "title": "upload picture for an Event",
+    "name": "UpdateEventPic",
+    "group": "Event",
+    "description": "<p>upload picture for an event.</p>",
+    "version": "0.0.0",
+    "filename": "routesdocs/event.js",
+    "groupTitle": "Event"
+  },
+  {
     "type": "POST",
-    "url": "/funds/",
+    "url": ":7400/funds/",
     "title": "Create Fund",
     "name": "Create",
     "group": "Fund",
@@ -434,36 +445,36 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "The",
-            "description": "<p>id of the user creating the user</p>"
+            "field": "User",
+            "description": "<p>The id of the user creating the Fund</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "Title",
-            "description": "<p>of the Fund</p>"
+            "description": "<p>Title of the Fund</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "Descrition",
-            "description": "<p>of the Fund</p>"
+            "description": "<p>description of the Fund</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "Location",
-            "description": "<p>of the Fund</p>"
+            "description": "<p>location of the Fund</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "Amount",
-            "description": "<p>of the fund</p>"
+            "description": "<p>amount of the fund</p>"
           }
         ]
       },
@@ -490,7 +501,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/Funds/",
+    "url": ":7400/Funds/",
     "title": "Get Funds paginated",
     "name": "GetFunds",
     "group": "Fund",
@@ -510,7 +521,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/Funds/:id",
+    "url": ":7400/Funds/:id",
     "title": "Get a specifc id",
     "name": "GetSingleFunds",
     "group": "Fund",
@@ -530,7 +541,7 @@ define({ "api": [
   },
   {
     "type": "DELETE",
-    "url": "/funds/:id",
+    "url": ":7400/funds/:id",
     "title": "Delete an Fund",
     "name": "RemoveSingleFunds",
     "group": "Fund",
@@ -550,7 +561,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/Funds/:id/pic",
+    "url": ":7400/Funds/:id/pic",
     "title": "upload picture for a Fund",
     "name": "UpdateFundPic",
     "group": "Fund",
@@ -561,7 +572,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/volunteer/:id",
+    "url": ":7300/volunteer/:id",
     "title": "Update a Volunteer",
     "name": "UpdateVolunteer",
     "group": "Volunteer",
@@ -590,7 +601,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/volunteer/pic/:id",
+    "url": ":7300/volunteer/pic/:id",
     "title": "upload picture for a Volunteer",
     "name": "UpdateVolunteerPic",
     "group": "Volunteer",
@@ -601,7 +612,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/volunteer/:id",
+    "url": ":7300/volunteer/:id",
     "title": "Get a Volunteer",
     "name": "getVolunteer",
     "group": "Volunteer",
@@ -621,7 +632,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/volunteer/paginate",
+    "url": ":7300/volunteer/paginate",
     "title": "Get volunteer",
     "name": "paginateVolunteer",
     "group": "Volunteer",
@@ -638,16 +649,5 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "routesdocs/volunteer.js",
     "groupTitle": "Volunteer"
-  },
-  {
-    "type": "PUT",
-    "url": "/events/:id/pic",
-    "title": "upload picture for an Event",
-    "name": "UpdateEventPic",
-    "group": "event",
-    "description": "<p>upload picture for an event.</p>",
-    "version": "0.0.0",
-    "filename": "routesdocs/event.js",
-    "groupTitle": "event"
   }
 ] });
