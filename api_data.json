@@ -1,7 +1,7 @@
 [
   {
     "type": "POST",
-    "url": ":7000/auth/login",
+    "url": "auth.evolunt.addislaunch.com/auth/login",
     "title": "User login",
     "name": "LoginUser",
     "group": "Auth",
@@ -87,7 +87,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7000/auth/logout",
+    "url": "auth.evolunt.addislaunch.com/auth/logout",
     "title": "User logout",
     "name": "LogoutUser",
     "group": "Auth",
@@ -107,7 +107,7 @@
   },
   {
     "type": "POST",
-    "url": ":7000/auth/signup",
+    "url": "auth.evolunt.addislaunch.com/auth/signup",
     "title": "User Signup",
     "name": "SignupUser",
     "group": "Auth",
@@ -214,7 +214,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7100/charities/:id",
+    "url": "charity.evolunt.addislaunch.com/charities/:id",
     "title": "Update a Charity",
     "name": "UpdateCharity",
     "group": "Charity",
@@ -243,7 +243,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7100/charities/:id/pic",
+    "url": "charity.evolunt.addislaunch.com/charities/:id/pic",
     "title": "upload picture for a Charity",
     "name": "UpdateCharityOic",
     "group": "Charity",
@@ -254,7 +254,7 @@
   },
   {
     "type": "GET",
-    "url": ":7100/charities/:id",
+    "url": "charity.evolunt.addislaunch.com/charities/:id",
     "title": "Get a Charity",
     "name": "getCharity",
     "group": "Charity",
@@ -274,7 +274,7 @@
   },
   {
     "type": "GET",
-    "url": ":7100/charities/paginate",
+    "url": "charity.evolunt.addislaunch.com/charities/paginate",
     "title": "Get Charities",
     "name": "paginateCharity",
     "group": "Charity",
@@ -294,7 +294,7 @@
   },
   {
     "type": "POST",
-    "url": ":7400/events/",
+    "url": "event-fund.evolunt.addislaunch.com/events/",
     "title": "Create Event",
     "name": "CreateEvent",
     "group": "Event",
@@ -362,7 +362,7 @@
   },
   {
     "type": "GET",
-    "url": ":7400/events/",
+    "url": "event-fund.evolunt.addislaunch.com/events/",
     "title": "Get Events paginated",
     "name": "GetEvents",
     "group": "Event",
@@ -382,7 +382,7 @@
   },
   {
     "type": "GET",
-    "url": ":7400/events/:id",
+    "url": "event-fund.evolunt.addislaunch.com/events/:id",
     "title": "Get a specifc id",
     "name": "GetSingleEvents",
     "group": "Event",
@@ -402,7 +402,7 @@
   },
   {
     "type": "DELETE",
-    "url": ":7400/events/:id",
+    "url": "event-fund.evolunt.addislaunch.com/events/:id",
     "title": "Delete an Event",
     "name": "RemoveSingleEvents",
     "group": "Event",
@@ -422,7 +422,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7400/events/:id/pic",
+    "url": "event-fund.evolunt.addislaunch.com/events/:id/pic",
     "title": "upload picture for an Event",
     "name": "UpdateEventPic",
     "group": "Event",
@@ -433,7 +433,7 @@
   },
   {
     "type": "POST",
-    "url": ":7500/charity/:id/postFeed",
+    "url": "feed.evolunt.addislaunch.com/charity/:id/postFeed",
     "title": "Post as charity",
     "name": "CreateFeedCharity",
     "group": "Feed",
@@ -473,7 +473,7 @@
   },
   {
     "type": "POST",
-    "url": ":7500/volunteer/:id/postFeed",
+    "url": "feed.evolunt.addislaunch.com/volunteer/:id/postFeed",
     "title": "Post as volunteer",
     "name": "CreateFeedVolunteer",
     "group": "Feed",
@@ -513,7 +513,7 @@
   },
   {
     "type": "DELETE",
-    "url": ":7500/:id/delete/:uuid",
+    "url": "feed.evolunt.addislaunch.com/:id/delete/:uuid",
     "title": "Delete a post",
     "name": "RemoveFeed",
     "group": "Feed",
@@ -524,7 +524,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7500/:id/update/:uuid",
+    "url": "feed.evolunt.addislaunch.com/:id/update/:uuid",
     "title": "Update a Post",
     "name": "UpdatePost",
     "group": "Feed",
@@ -564,7 +564,7 @@
   },
   {
     "type": "GET",
-    "url": ":7500/:id/getTimeline",
+    "url": "feed.evolunt.addislaunch.com/:id/getTimeline",
     "title": "Get Time line",
     "name": "getTimeLine",
     "group": "Feed",
@@ -584,7 +584,7 @@
   },
   {
     "type": "GET",
-    "url": ":7500/:id/getUserFeed",
+    "url": "feed.evolunt.addislaunch.com/:id/getUserFeed",
     "title": "",
     "name": "getUserFeed",
     "group": "Feed",
@@ -604,7 +604,7 @@
   },
   {
     "type": "POST",
-    "url": ":7400/funds/",
+    "url": "event-fund.evolunt.addislaunch.com/funds/",
     "title": "Create Fund",
     "name": "Create",
     "group": "Fund",
@@ -672,7 +672,7 @@
   },
   {
     "type": "GET",
-    "url": ":7400/Funds/",
+    "url": "event-fund.evolunt.addislaunch.com/Funds/",
     "title": "Get Funds paginated",
     "name": "GetFunds",
     "group": "Fund",
@@ -692,7 +692,7 @@
   },
   {
     "type": "GET",
-    "url": ":7400/Funds/:id",
+    "url": "event-fund.evolunt.addislaunch.com/Funds/:id",
     "title": "Get a specifc id",
     "name": "GetSingleFunds",
     "group": "Fund",
@@ -712,7 +712,7 @@
   },
   {
     "type": "DELETE",
-    "url": ":7400/funds/:id",
+    "url": "event-fund.evolunt.addislaunch.com/funds/:id",
     "title": "Delete an Fund",
     "name": "RemoveSingleFunds",
     "group": "Fund",
@@ -732,7 +732,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7400/Funds/:id/pic",
+    "url": "event-fund.evolunt.addislaunch.com/Funds/:id/pic",
     "title": "upload picture for a Fund",
     "name": "UpdateFundPic",
     "group": "Fund",
@@ -743,7 +743,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7300/volunteer/:id",
+    "url": "volunteer.evolunt.addislaunch.com/volunteer/:id",
     "title": "Update a Volunteer",
     "name": "UpdateVolunteer",
     "group": "Volunteer",
@@ -772,7 +772,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7300/volunteer/:id/pic",
+    "url": "volunteer.evolunt.addislaunch.com/volunteer/:id/pic",
     "title": "upload picture for a Volunteer",
     "name": "UpdateVolunteerPic",
     "group": "Volunteer",
@@ -783,7 +783,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7300/:id/Unfollow",
+    "url": "volunteer.evolunt.addislaunch.com/:id/Unfollow",
     "title": "Follow a Volunteer",
     "name": "followVolunteer",
     "group": "Volunteer",
@@ -823,7 +823,7 @@
   },
   {
     "type": "PUT",
-    "url": ":7300/:id/follow",
+    "url": "volunteer.evolunt.addislaunch.com/:id/follow",
     "title": "Follow a Volunteer",
     "name": "followVolunteer",
     "group": "Volunteer",
@@ -863,7 +863,7 @@
   },
   {
     "type": "GET",
-    "url": ":7300/volunteer/:id",
+    "url": "volunteer.evolunt.addislaunch.com/volunteer/:id",
     "title": "Get a Volunteer",
     "name": "getVolunteer",
     "group": "Volunteer",
@@ -883,7 +883,7 @@
   },
   {
     "type": "GET",
-    "url": ":7300/volunteer/paginate",
+    "url": "volunteer.evolunt.addislaunch.com/volunteer/paginate",
     "title": "Get volunteer",
     "name": "paginateVolunteer",
     "group": "Volunteer",
