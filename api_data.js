@@ -433,7 +433,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "feed.evolunt.addislaunch.com/charity/:id/postFeed",
+    "url": "feed.evolunt.addislaunch.com/feeds/charity/:id/postFeed",
     "title": "Post as charity",
     "name": "CreateFeedCharity",
     "group": "Feed",
@@ -473,7 +473,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "feed.evolunt.addislaunch.com/volunteer/:id/postFeed",
+    "url": "feed.evolunt.addislaunch.com/feeds/volunteer/:id/postFeed",
     "title": "Post as volunteer",
     "name": "CreateFeedVolunteer",
     "group": "Feed",
@@ -513,7 +513,7 @@ define({ "api": [
   },
   {
     "type": "DELETE",
-    "url": "feed.evolunt.addislaunch.com/:id/delete/:uuid",
+    "url": "feed.evolunt.addislaunch.com/feeds/:id/delete/:uuid",
     "title": "Delete a post",
     "name": "RemoveFeed",
     "group": "Feed",
@@ -524,7 +524,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "feed.evolunt.addislaunch.com/:id/update/:uuid",
+    "url": "feed.evolunt.addislaunch.com/feeds/:id/update/:uuid",
     "title": "Update a Post",
     "name": "UpdatePost",
     "group": "Feed",
@@ -564,7 +564,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "feed.evolunt.addislaunch.com/:id/getTimeline",
+    "url": "feed.evolunt.addislaunch.com/feeds/:id/getTimeline",
     "title": "Get Time line",
     "name": "getTimeLine",
     "group": "Feed",
@@ -584,7 +584,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "feed.evolunt.addislaunch.com/:id/getUserFeed",
+    "url": "feed.evolunt.addislaunch.com/feeds/:id/getUserFeed",
     "title": "",
     "name": "getUserFeed",
     "group": "Feed",
@@ -740,6 +740,40 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "routesdocs/fund.js",
     "groupTitle": "Fund"
+  },
+  {
+    "type": "",
+    "url": "Events",
+    "title": "Model",
+    "name": "Events",
+    "group": "Models",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Volunteer Model:",
+          "content": "{\n  user:           { type: Schema.Types.ObjectId, ref: 'User' },\n  picture:        { type: String, default: '' },\n  first_name:     { type: String },\n  last_name:      { type: String },\n  locations:       [{ type: String }],\n  interests:        [{ type: String }],\n  following:      [{ type: Schema.Types.ObjectId, ref: 'User' }],\n  followers:      [{ type: Schema.Types.ObjectId, ref: 'User' }],\n  birth_date:     {type:  Date},\n  gender:         {type: String}, \n  user_name:      {type: String},       \n  date_created:   { type: Date },\n  last_modified:  { type: Date }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Charity Model:",
+          "content": "{\n  user:           { type: Schema.Types.ObjectId, ref: 'User' },\n  picture:        { type: String, default: '' },\n  name:           { type: String },\n  city:           { type: String },\n  website:        { type: String },\n  phone_number:   { type: Number },\n  description:    { type: String },\n  causes:         { type: Number },\n  location:       [{ type: String }],\n  interests:      [{ type: String }],\n  following:      [{ type: Schema.Types.ObjectId, ref: 'User' }],\n  followers:      [{ type: Schema.Types.ObjectId, ref: 'User' }],\n  user_name:      {type: String},       \n  date_created:   { type: Date },\n  last_modified:  { type: Date }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Fund Model:",
+          "content": "{\n  charity:        { type: Schema.Types.ObjectId, ref: 'Charity' },\n  volunteer:      { type: Schema.Types.ObjectId, ref: 'Volunteer' },\n  picture:          { type: String, default: '' },\n  title:            { type: String },\n  description:      { type: String },\n  location:         { type: String },\n  event:           { type: Schema.Types.ObjectId, ref: 'Event' },\n  amount:             {type: Number},\n  contibuted_users: [{ type: Schema.Types.ObjectId, ref: 'User' }], \n  date_created:     { type: Date },\n  last_modified:    { type: Date }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Events Model:",
+          "content": "{\n  created_by:     { type: Schema.Types.ObjectId, ref: 'User' },\n  charity:        { type: Schema.Types.ObjectId, ref: 'Charity' },\n  volunteer:      { type: Schema.Types.ObjectId, ref: 'Volunteer' },\n  picture:        { type: String, default: '' },\n  title:          { type: String },\n  description:    { type: String },\n  location:       { type: String },\n  fund:           { type: Schema.Types.ObjectId, ref: 'Fund' },\n  date_of_event:  { type: Date},\n  intersetd_users:[{ type: Schema.Types.ObjectId, ref: 'User' }], \n  date_created:   { type: Date },\n  last_modified:  { type: Date }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routesdocs/models.js",
+    "groupTitle": "Models"
   },
   {
     "type": "PUT",
